@@ -1,0 +1,611 @@
+body {
+    font: 400 1.5em Lato, sans-serif;
+    line-height: 1.8;
+    color: #3D3D3D;
+    width:100%;
+    height:100%;
+}
+
+h2 {
+    font-size: 1.7em;
+    text-transform: uppercase;
+    color: #3D3D3D;
+    font-weight: 600;
+    margin-bottom: 1.5em;
+}
+h4 {
+    font-size: 1.5em;
+    line-height: 1.375em;
+    color: #3D3D3D;
+    font-weight: 400;
+    margin-bottom: 1.5em;
+}
+
+.rowSlideanim{
+    display: inline;
+}
+
+.picture-small{
+    border-radius: 50%;
+    width: 90%;
+    height: 90%;
+    display: block;
+}
+
+section{
+    padding-top: 2%;
+    margin-left: 11%;
+    margin-right: 11%;
+}
+
+.todoarticle{
+    height:80vh; /*passt sich Größe von Bildschirm an - % geht nicht*/
+    width: 95%;
+    float: left;
+}
+
+/* the list itself */
+/* Include the padding and border in an element's total width and height */
+.todoarticle * {
+    box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+.todoarticle ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+/* Style the list items */
+.todoarticle ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 1% 1% 1% 3%;
+    background: #eee;
+    font-size: 1.2em;
+    transition: 0.2s;
+
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+.tabcontent ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+.tabcontent ul li:hover {
+    background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+.tabcontent ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+/* Style the close button */
+.close {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    padding: 1% 2% 1% 1%;
+}
+
+.close:hover {
+    background-color: #eee;
+    color: white;
+}
+
+/* todo HERE ARE THE TABS */
+
+/* Style tab links */
+.tablink {
+    background-color: #303030;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1.5% 1.5%;
+    font-size: 1.2em;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #666;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    display: none;
+    padding: 2% 2%;
+    height: 90%;
+    overflow: auto;
+}
+
+#All {background-color: #95adb2;}
+#Private {background-color: #8cb7bb;}
+#Work {background-color: #b6cfd3;}
+#Home{ background-color: #c3d3d3;}
+
+#PrivateDone{background-color: #98C29B;}
+#WorkDone{background-color: #AFCDB1;}
+#HomeDone{background-color: #C1DCCE;}
+#AllDone{background-color: #A0C0B0;}
+
+/* todo: this is the scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 1%;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* todo THIS IS BOOTSTRAP SIDEBAR */
+
+/* Style the input */
+#createToDo input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    padding: 3%;
+    float: left;
+    font-size: 1.2em;
+    color: #303030;
+}
+
+#createToDo{
+    height: 90% !important;
+}
+
+/* Style the "Add" button */
+.addBtn {
+    padding: 3%;
+    width: 20%;
+    background: #d9d9d9;
+    color: #555;
+    float: right;
+
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+.addBtn:hover {
+    background-color: #bbb;
+}
+/* The sidebar menu */
+.sidebar {
+    height: 100vh; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: #EDEAE5;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 5%; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+    color: #a1a1a1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+    float: right;
+    position: absolute;
+    padding: 0% 2.5% 2.5% 2.5%;
+    text-decoration: none;
+    font-size: 2em;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    top: 3%;
+    right: 4%;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+    float: right;
+    position: absolute; /*des is a idee*/
+    font-size: 2em;
+    width: 2em;
+    cursor: pointer;
+    background-color: #303030;
+    color: white;
+    padding: 0.35% 1%;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+
+
+.row{
+    alignment: left;
+}
+.boxes {
+    margin: auto;
+    margin-top: 15% !important;
+    padding: 10%;
+    background: #fff;
+}
+#openSidebar {
+    padding: 2%;
+    margin-top: 4%;
+}
+
+/*change to DONE and back */
+#gotoDone {
+    padding: 2%;
+    margin-top: 3%;
+}
+
+#gotoOpen
+{
+    padding: 2%;
+    margin-top: 11%;
+}
+/*Checkboxes styles*/
+input[type="checkbox"] { display: none; }
+
+input[type="checkbox"] + label {
+    display: block;
+    position: relative;
+    /*padding-left: 35px;*/
+    margin-bottom: 7%;
+    font: 1.1em 'Open Sans', sans-serif;
+    color: #3D3D3D;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+input[type="checkbox"] + label:last-child { margin-bottom: 0; }
+
+input[type="checkbox"] + label:before {
+    content: '';
+    display: block;
+    width: 1em;
+    height: 1em;
+    border: 0.1em solid #026670;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .6;
+    -webkit-transition: all .12s, border-color .08s;
+    transition: all .12s, border-color .08s;
+}
+
+input[type="checkbox"]:checked + label:before {
+    width: 0.6em;
+    top: -0.3em;
+    left: 0.3em;
+    border-radius: 0;
+    opacity: 1;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* todo THIS IS BOOTSTRAP INDEX */
+#idea img, video{
+    margin-left: 25%;
+    width: 50%;
+}
+
+.jumbotron {
+    color: #fff;
+    background: url("desk.jpg") no-repeat center center;
+    padding: 25%;
+    background-size: cover;
+    font-family: Montserrat, sans-serif;
+}
+.jumbotron .h1, .jumbotron h1{
+    text-shadow: 2px 2px #303030;
+}
+
+.container-fluid {
+    padding: 10% 5%;
+}
+
+footer{
+    padding:1% !important;
+}
+
+.container{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 11% !important;
+    margin-right: 11% !important;
+}
+
+.bg-grey {
+    background-color: #f6f6f6;
+}
+.logo-small {
+    color: #026670;
+    font-size: 50px;
+}
+.logo {
+    color: #026670;
+    font-size: 200px;
+}
+.thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+}
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #026670;
+}
+.carousel-indicators li {
+    border-color: #026670;
+}
+.carousel-indicators li.active {
+    background-color: #026670;
+}
+.item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+}
+.item span {
+    font-style: normal;
+}
+.panel {
+    border: 1px solid #026670;
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+}
+.panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+}
+.panel-footer .btn:hover {
+    border: 1px solid #026670;
+    background-color: #fff !important;
+    color: #026670;
+}
+.panel-heading {
+    color: #fff !important;
+    background-color: #026670 !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.panel-footer {
+    background-color: white !important;
+}
+.panel-footer h3 {
+    font-size: 32px;
+}
+.panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+}
+.panel-footer .btn {
+    margin: 15px 0;
+    background-color: #026670;
+    color: #fff;
+}
+.navbar {
+    margin-bottom: 0;
+    background-color: #026670;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+}
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #026670 !important;
+    background-color: #FCE181 !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #026670 !important;
+}
+footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #026670;
+}
+/*.slideanim {visibility:hidden;}*/
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+@media screen and (max-width: 1024px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+    section{
+        margin: 2%;
+    }
+    .container{
+        margin: 1% !important;
+    }
+    #openSidebar{margin-top: 10%}
+    #gotoDone{margin-top: 11%}
+    #gotoOpen{margin-top: 18%}
+    .openbtn{
+        font-size: 1.4em;
+        width:5%;
+    }
+
+}
+@media screen and (max-height: 550px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+    .sidebar .closebtn {margin-top: 5%;}
+
+}
+
+@media screen and (max-width: 380px) {
+    body{
+        font-size: 1.4em;
+    }
+    h1{font-size: 1.8em;}
+    h3{font-size: 1.4em;}
+    .logo {
+        font-size: 150px;
+    }
+    section{
+        margin: 2% !important;
+    }
+
+    .container{
+        margin: 1% !important;
+    }
+    #jumbotronHeaderP{
+        font-size: 0.9em;
+    }
+    #jumbotronHeaderH1{
+        font-size: 2em;
+    }
+    .login-page{
+        width: 360px;
+        padding: 0 0 0 0;
+    }
+    .container-fluid {
+        padding: 10% 5%;
+        width: 120%;}
+}
+
+
+/*todo FOR LOGIN FORM*/
+
+.login-page {
+    width: 360px;
+    padding: 2% 0 0;
+    margin: auto;
+
+}
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 5% 9% 5% 9%;
+    padding: 5% 5% 5% 5%;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.form .buttonsub {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #fce181;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+.form input:hover,.form input:active,.form input:focus {
+    background: #fce181;
+}
+.form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+.form .message a {
+    color: #026670;
+    text-decoration: none;
+}
+.form .register-form {
+    display: none;
+}
+
+
