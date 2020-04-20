@@ -1,5 +1,8 @@
 <?php
-$pdo = new PDO("mysql:host=localhost;dbname=userdatabase", "faelb", "faelb");
+$pdo = new PDO("mysql:host=localhost;dbname=userdatabase", "root", "");
+
+$user_mail = $_GET['email'];
+$type = $_GET['type'];
 
 $temp = $_GET['email'];
 $timestamp = $_GET['type'];
