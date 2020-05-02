@@ -1,8 +1,8 @@
 <?php
-$pdo = new PDO("mysql:host=localhost;dbname=userdatabase", "faelb", "faelb");
+$pdo = new PDO("mysql:host=localhost;dbname=userdatabase", "root", "");
 
-$temp = $_GET['email'];
-$timestamp = $_GET['type'];
+$user_mail = $_GET['email'];
+$type = $_GET['type'];
 
 
 //get user id via e-mail (@live via $_GET)
