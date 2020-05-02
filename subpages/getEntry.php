@@ -4,9 +4,6 @@ $pdo = new PDO("mysql:host=localhost;dbname=userdatabase", "root", "");
 $user_mail = $_GET['email'];
 $type = $_GET['type'];
 
-$temp = $_GET['email'];
-$timestamp = $_GET['type'];
-
 
 //get user id via e-mail (@live via $_GET)
 $get_id_sql = "SELECT id FROM users WHERE email='" . $user_mail . "'";
