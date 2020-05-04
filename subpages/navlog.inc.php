@@ -11,11 +11,11 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="/sites/agendo/subpages/loggedin.php">BOARDS</a> </li>
-            <li><a id="navAbout" href="/sites/agendo/index.php#about">ABOUT</a></li>
-            <li><a href="/sites/agendo/index.php#idea">IDEA</a></li>
-            <li><a id="navContact" href="/sites/agendo/index.php#contact">CONTACT</a></li>
-            <li><a href="/sites/agendo/subpages/logout.php" id="logout" >LOGOUT</a></li>
+            <li><a href="/agendo/subpages/loggedin.php">BOARDS</a> </li>
+            <li><a id="navAbout" href="/agendo/index.php#about">ABOUT</a></li>
+            <li><a href="/agendo/index.php#idea">IDEA</a></li>
+            <li><a id="navContact" href="/agendo/index.php#contact">CONTACT</a></li>
+            <li><a href="/agendo/subpages/logout.php" id="logout" >LOGOUT</a></li>
         </ul>
     </div>
 </div>
