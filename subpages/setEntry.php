@@ -1,6 +1,6 @@
 <?php
 session_start();
-$pdo = new PDO("mysql:host=localhost;dbname=userdatabase", "root", "");
+$pdo = new PDO("mysql:host=10.0.3.18;dbname=userdatabase", "root", "");
 
 $user_mail = $_GET['email'];
 $input = $_GET['inputVal'];
