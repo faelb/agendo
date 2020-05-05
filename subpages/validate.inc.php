@@ -48,10 +48,11 @@ session_start();
 //Use htmlspecialchars in order to prevent XSS Attacks!!!
 $email=htmlspecialchars($_POST['email']);
 $encrpwd=sha1($_POST['password']);
-
+$version = apache_get_version();
+echo "$version\n";
 
 $pdo = new PDO("mysql:host=10.0.3.18;dbname=userdatabase;port=3306", "root", "root_password");
-echo "pdo erstellt";
+
 //Retrieve the user account information for the given username.
 $sql = "SELECT id, firstname, email, password FROM users WHERE email = :username";
 $stmt = $pdo->prepare($sql);
