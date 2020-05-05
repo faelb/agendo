@@ -49,7 +49,7 @@ $email=htmlspecialchars($_POST['email']);
 $encrpwd=sha1($_POST['password']);
 
 
-$pdo = new PDO("mysql:host=10.0.3.18;dbname=userdatabase","root","");
+$pdo = new PDO("mysql:host=10.0.3.18;dbname=userdatabase;port=3306", "root", "");
 
 //Retrieve the user account information for the given username.
 $sql = "SELECT id, firstname, email, password FROM users WHERE email = :username";

@@ -4,7 +4,7 @@ session_start();
 
 $user_mail = $_SESSION['login'];
 $user_name = $_SESSION['firstname'];
-$pdo = new PDO("mysql:host=10.0.3.18;dbname=userdatabase", "root", "");
+$pdo = new PDO("mysql:host=10.0.3.18;dbname=userdatabase;port=3306", "root", "");
 $get_id_sql = "SELECT id FROM users WHERE email='" . $user_mail . "'";
 $user_id = $pdo->query($get_id_sql)->fetch();
 ?>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-$pdo = new PDO("mysql:host=10.0.3.18;dbname=userdatabase", "root", "");
+$pdo = new PDO("mysql:host=10.0.3.18;dbname=userdatabase;port=3306", "root", "");
 $user_name = $_SESSION['firstname'];
 $user_mail = $_SESSION['login'];
 $get_id_sql = "SELECT id FROM users WHERE email='" . $user_mail . "'";
