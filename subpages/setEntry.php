@@ -1,6 +1,6 @@
 <?php
 session_start();
-$pdo = new PDO("mysql:host=10.0.3.18;dbname=userdatabase;port=3306", "root", "");
+$pdo = new PDO("mysql:host=10.0.3.18;dbname=userdatabase;port=3306", "root", "root_password");
 
 $user_mail = $_GET['email'];
 $input = $_GET['inputVal'];
