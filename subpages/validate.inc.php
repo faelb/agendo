@@ -44,6 +44,7 @@ session_start();
 
 <?php
 
+echo "bin drin";
 //Use htmlspecialchars in order to prevent XSS Attacks!!!
 $email=htmlspecialchars($_POST['email']);
 $encrpwd=sha1($_POST['password']);
