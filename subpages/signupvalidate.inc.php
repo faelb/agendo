@@ -23,14 +23,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="..\index.html#myPage">Logo</a>
+            <a class="navbar-brand" href="..\index.php#myPage">Logo</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="..\index.html#about">ABOUT</a></li>
+                <li><a href="..\index.php#about">ABOUT</a></li>
                 <li><a href="login.php">LOGIN</a></li>
                 <li><a href="signup.php">SIGN UP</a></li>
-                <li><a href="..\index.html#contact">CONTACT</a></li>
+                <li><a href="..\index.php#contact">CONTACT</a></li>
             </ul>
         </div>
     </div>
