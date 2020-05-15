@@ -20,6 +20,8 @@ session_start();
 <!--for the NAV bar-->
 <nav class="navbar navbar-default navbar-fixed-top">
     <?php
+    //for IP Address load balancing AWS:
+    $ip_server = $_SERVER['SERVER_ADDR'];
     // Include the right Nav-Bar depending if the user is logged in
     if (isset($_SESSION['login'])){
       include("subpages/navlog.inc.php");
@@ -78,7 +80,7 @@ session_start();
 <!-- Idea-->
 <div id="idea" class="container-fluid bg-grey">
     <h2 class="text-center">IDEA</h2>
-    <h4 class="text-center">agenDo helps you to organize you life. nie wieder waws vergessen. alles gute</h4>
+    <h4 class="text-center">agenDo helps you to organize you life. nie wieder waws vergessen. <?php echo $ip_server?></h4>
     <video width="60%" height="50%" controls>
         <source src="src/screenrecordAgenDo.mp4" type="video/mp4">
         Your browser does not support the video tag.
